@@ -5,18 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="https://www.vlab.co.in/images/logo.jpg" type="image/x-icon" />
   <link rel="stylesheet" href="./src/css/style2.css">
+   <style>
    
+   </style>
 </head>
 <body>
-  <p class="p-head">Simulation of establishing interrelation between ThingSpeak Cloud and ESP2866/ESP32.
-  </p>
+  <header>
+    <div class="exp-changer">
+      <div class="exp-changer-heading">
+        <p class="p-head">IOT Virtual Lab</p>
+      </div>
+    </div>
+  </header>  
   <div class="container">
     <div class="box" style="border: none;">
       <iframe src="./ledsim.html" style="border: 2px solid rgb(197, 197, 197);"></iframe>
       
     </div>
-    <p class="p-head2">After start the simulation, the data will be send to Thingspeak Channel. <a href="https://thingspeak.com/channels/2454420">View Channel</a>
+    <a href="#scroll">
+      <p class="p-head2" >After start the simulation, the data will be send to Thingspeak Channel. 
+    </a>
     </p>
+    <div class="container" id="scroll">
+      <div class="box" style="border: none;">
+        <iframe  src="https://thingspeak.com/channels/2454420" ></iframe>
+        
+      </div>
     
 
         
