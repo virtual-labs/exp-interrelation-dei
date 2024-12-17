@@ -18,12 +18,7 @@
   right: 0px;
   
 }
-.box2 ::-webkit-scrollbar{
-  
-}
-.box2{
-  
-}
+
 textarea{
   border-radius: 8px;
   outline: none;
@@ -78,7 +73,7 @@ body{
 #textBox{
   position: relative;
   top: 10px;
-  font-size: 20px;
+  font-size: 16px;
   /* background-color: red; */
   width: 40%;
   height: 100vh;

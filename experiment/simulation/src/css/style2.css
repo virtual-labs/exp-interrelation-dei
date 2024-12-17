@@ -3,6 +3,35 @@ body {
     padding: 0;
     box-sizing: border-box;
   }
+  html{
+    scroll-behavior: smooth;
+    top: 0px;
+  }
+/* Main container for the simulation */
+.p-head {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.exp-changer {
+  display: flex;
+  justify-content: center;
+  border-bottom: 4px solid rgba(4, 59, 79, 0.5);
+  height: 60px;
+  }
+
+.exp-changer-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: grey;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  outline: none;
+  position: relative;
+  top: 0vh;  
+} 
 
   .container {
     display: flex;

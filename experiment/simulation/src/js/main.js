@@ -9,6 +9,7 @@ function changePower() {
     document.getElementById("pushbuttonPower").innerHTML = "Stop Simulation";
     document.getElementById("pushbuttonPower").style.backgroundColor = "red";
     image_tracker = "off";
+    alert("Sending data to Thingspeak server, wait for 15 seconds to check data");
   } else if (image_tracker == "off") {
     image.src = "./src/images/dht_off.gif";
     document.getElementById("pushbuttonPower").innerHTML = "Start Simulation";
