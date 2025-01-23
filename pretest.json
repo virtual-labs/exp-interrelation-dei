@@ -1,0 +1,39 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "Which cloud platform is specifically designed for IoT applications?",
+      "answers": {
+        "a": "AWS",
+        "b": "Microsoft Azure",
+        "c": "ThingSpeak",
+        "d": "IBM Bluemix"
+      },
+      "explanations": {
+        "a": "AWS provides IoT-specific services but is a general cloud service.",
+        "b": "Microsoft Azure offers cloud services for various applications, including IoT.",
+        "c": "ThingSpeak is an IoT platform designed specifically for sensor data collection and analysis.",
+        "d": "IBM Bluemix provides cloud services, including IoT tools and services."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which protocol is commonly used to send data from ESP8266/ESP32 to a cloud platform?",
+      "answers": {
+        "a": "HTTP",
+        "b": "FTP",
+        "c": "SMTP",
+        "d": "SSH"
+      },
+      "explanations": {
+        "a": "HTTP is commonly used for communication between devices and cloud platforms in IoT applications.",
+        "b": "FTP is for file transfer, not for sensor data communication.",
+        "c": "SMTP is used for email communication, not data transfer.",
+        "d": "SSH is for secure remote access, not for cloud communication."
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  ]
+}

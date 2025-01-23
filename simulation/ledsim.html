@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Virtual IoT Lab DEI</title>
+    <link
+      rel="icon"
+      href="https://www.vlab.co.in/images/logo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./src/css/sidepanel.css" />
+  </head>
+
+  <body>
+    
+
+    <div class="container" >
+      <img id="ifimg" src="./src/images/dht_off.gif" alt="interfacing" />
+      <textarea readonly cols="30" rows="10" type="text" id="textBox" placeholder="insert the code"></textarea>
+      <div class="code-head startStop">
+        <h2 id="pushbuttonPower" onclick="changePower();">Start Simulation</h2>
+      </div>
+    </div>
+    <script>
+      // for insert code
+      function insertled() {
+        var serv = (document.getElementById(
+          "textBox"
+        ).value = `#include <WiFi.h>
+#include <HTTPClient.h>
+#include "DHT.h"
+
+// Replace with your network credentials
+const char* ssid = "iotvlab";
+const char* password = "iotvlab123";
+
+// Replace with your ThingSpeak API key
+String apiKey = "VLEIWMHH82MLCBD";
+
+// ThingSpeak server
+const char* server = "api.thingspeak.com";
+
+// DHT11 sensor configuration
+#define DHTPIN 4  // Digital pin connected to the DHT11 sensor
+#define DHTTYPE DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  dht.begin();
+
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");
+  }
+  Serial.println();
+  Serial.println("WiFi connected");
+}
+
+void loop() {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+
+    float temperature = dht.readTemperature();
+    float humidity = dht.readHumidity();
+
+    if (isnan(temperature) || isnan(humidity)) {
+      Serial.println("Failed to read from DHT sensor!");
+      return;
+    }
+
+    String url = "http://api.thingspeak.com/update?api_key=" + apiKey + "&field1=" + String(temperature) + "&field2=" + String(humidity);
+
+    http.begin(url);
+    int httpCode = http.GET();
+
+    if (httpCode > 0) {
+      String payload = http.getString();
+      Serial.println("Data sent to ThingSpeak: " + payload);
+    } else {
+      Serial.println("Error in sending data to ThingSpeak");
+    }
+
+    http.end();
+  } else {
+    Serial.println("WiFi not connected");
+  }
+
+  // ThingSpeak allows updates every 15 seconds
+  delay(15000);
+}
+`);
+      }
+      insertled();
+    </script>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+  </body>
+</html>

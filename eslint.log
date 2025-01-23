@@ -1,0 +1,12 @@
+
+/home/runner/work/exp-interrelation-dei/exp-interrelation-dei/experiment/simulation/src/js/main.js
+    5:10  warning  'changePower' is defined but never used         no-unused-vars
+   21:10  warning  'changeImage' is defined but never used         no-unused-vars
+   37:11  warning  'channelID' is assigned a value but never used  no-unused-vars
+   78:9   warning  'intervalId' is not defined                     no-undef
+   83:23  warning  'intervalId' is not defined                     no-undef
+  113:10  warning  'openNav' is defined but never used             no-unused-vars
+  118:10  warning  'closeNav' is defined but never used            no-unused-vars
+
+✖ 7 problems (0 errors, 7 warnings)
+

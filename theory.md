@@ -1,0 +1,2 @@
+This experiment explores how to establish a connection between cloud platforms such as AWS (Amazon Web Services), Microsoft Azure, ThingSpeak, and IBM Bluemix with ESP8266/ESP32 microcontrollers. 
+By using protocols like HTTP, MQTT, or CoAP, the ESP module sends sensor data to the cloud platforms for storage, processing, and visualization. This enables the creation of scalable IoT applications that can monitor, analyze, and control devices remotely through the cloud infrastructure.
