@@ -1,1 +1,1 @@
-### Aim of the experiment
+1. Simulation of establishing interrelation between cloud (AWS, Microsoft Azure, ThingSpeak and IBM Bluemix) and ESP2866/ESP32.

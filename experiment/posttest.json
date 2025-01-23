@@ -2,37 +2,37 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "What is the main purpose of cloud platforms like AWS, Microsoft Azure, and ThingSpeak in IoT applications?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To store and process data from devices",
+        "b": "To power the sensors",
+        "c": "To connect devices using Wi-Fi",
+        "d": "To encrypt the data"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Cloud platforms store, process, and analyze data coming from IoT devices.",
+        "b": "Cloud platforms do not power the sensors; they only process and store data.",
+        "c": "Wi-Fi is used for device connectivity, not the cloud platform.",
+        "d": "Encryption is important but not the main purpose of cloud platforms."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following cloud platforms provides specific services for IoT device management?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "AWS IoT Core",
+        "b": "Google Drive",
+        "c": "Microsoft Word",
+        "d": "Dropbox"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "AWS IoT Core is specifically designed for managing IoT devices and their data.",
+        "b": "Google Drive is a cloud storage service, not an IoT platform.",
+        "c": "Microsoft Word is a document editor, not an IoT service.",
+        "d": "Dropbox is a cloud storage service, not an IoT platform."
       },
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   ]
