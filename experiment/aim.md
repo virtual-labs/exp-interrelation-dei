@@ -1,1 +1,3 @@
-1. Simulation of establishing interrelation between cloud (AWS, Microsoft Azure, ThingSpeak and IBM Bluemix) and ESP2866/ESP32.
+## Aim
+
+To simulate data connectivity and platform interrelation between ESP8266/ESP32 and different cloud services. The objective is to analyze interoperability, data exchange methods, and multi-cloud integration in IoT solutions.

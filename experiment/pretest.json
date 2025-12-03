@@ -2,38 +2,104 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Which cloud platform is specifically designed for IoT applications?",
+      "question": "Which communication protocol does ThingSpeak use?",
       "answers": {
-        "a": "AWS",
-        "b": "Microsoft Azure",
-        "c": "ThingSpeak",
-        "d": "IBM Bluemix"
+        "a": "MQTT",
+        "b": "HTTP",
+        "c": "CoAP",
+        "d": "WebSockets"
       },
-      "explanations": {
-        "a": "AWS provides IoT-specific services but is a general cloud service.",
-        "b": "Microsoft Azure offers cloud services for various applications, including IoT.",
-        "c": "ThingSpeak is an IoT platform designed specifically for sensor data collection and analysis.",
-        "d": "IBM Bluemix provides cloud services, including IoT tools and services."
-      },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     },
     {
-      "question": "Which protocol is commonly used to send data from ESP8266/ESP32 to a cloud platform?",
+      "question": "AWS IoT Core mainly uses which protocol?",
+      "answers": {
+        "a": "MQTT",
+        "b": "SPI",
+        "c": "UART",
+        "d": "FTP"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Azure IoT Hub works on which two major protocols?",
+      "answers": {
+        "a": "SPI and UART",
+        "b": "MQTT and HTTP",
+        "c": "FTP and SSH",
+        "d": "I2C and CAN"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "IBM Bluemix uses ___ protocol for IoT communication.",
+      "answers": {
+        "a": "CoAP",
+        "b": "MQTT",
+        "c": "Modbus",
+        "d": "ZigBee"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is required to authenticate AWS IoT Core device?",
+      "answers": {
+        "a": "API Key",
+        "b": "Certificates",
+        "c": "Username and Password",
+        "d": "RFID Tags"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "API key is required in which cloud platform?",
+      "answers": {
+        "a": "Amazon Web Services",
+        "b": "ThingSpeak",
+        "c": "Google Drive",
+        "d": "GitHub"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "ESP8266 is mainly used for ___ communication.",
+      "answers": {
+        "a": "CAN",
+        "b": "Wi-Fi",
+        "c": "Bluetooth",
+        "d": "LoRa"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which cloud is easiest for beginners?",
+      "answers": {
+        "a": "AWS IoT Core",
+        "b": "ThingSpeak",
+        "c": "Azure IoT Hub",
+        "d": "IBM Watson IoT"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which platform uses device type and device ID?",
+      "answers": {
+        "a": "AWS",
+        "b": "Azure IoT",
+        "c": "IBM Watson IoT",
+        "d": "ThingSpeak"
+      },
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Which protocol is lightweight: MQTT or HTTP?",
       "answers": {
         "a": "HTTP",
-        "b": "FTP",
-        "c": "SMTP",
-        "d": "SSH"
+        "b": "MQTT",
+        "c": "Both are same",
+        "d": "None of these"
       },
-      "explanations": {
-        "a": "HTTP is commonly used for communication between devices and cloud platforms in IoT applications.",
-        "b": "FTP is for file transfer, not for sensor data communication.",
-        "c": "SMTP is used for email communication, not data transfer.",
-        "d": "SSH is for secure remote access, not for cloud communication."
-      },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
     }
   ]
 }
