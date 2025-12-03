@@ -10,11 +10,21 @@ function changePower() {
     document.getElementById("pushbuttonPower").style.backgroundColor = "red";
     image_tracker = "off";
     alert("Sending data to Thingspeak server, wait for 15 seconds to check data");
+    
+    // Send message to parent window to show static values
+    if (window.parent) {
+      window.parent.postMessage({ type: 'simulationStart', temp: 24, humidity: 40 }, '*');
+    }
   } else if (image_tracker == "off") {
     image.src = "./src/images/dht_off.gif";
     document.getElementById("pushbuttonPower").innerHTML = "Start Simulation";
     document.getElementById("pushbuttonPower").style.backgroundColor ="#009C4E";
     image_tracker = "dis";
+    
+    // Send message to parent window to hide values
+    if (window.parent) {
+      window.parent.postMessage({ type: 'simulationStop' }, '*');
+    }
   } 
 } 
 
