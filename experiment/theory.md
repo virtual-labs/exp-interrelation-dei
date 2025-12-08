@@ -1,13 +1,13 @@
-# Cloud-Based IoT Communication (ESP8266/ESP32 with AWS, Azure, ThingSpeak & IBM Cloud)
+## Cloud-Based IoT Communication (ESP8266/ESP32 with AWS, Azure, ThingSpeak & IBM Cloud)
 
 Modern IoT systems rely heavily on cloud platforms for data storage, analytics, visualization, decision-making, and remote device control. Cloud platforms like AWS IoT Core, Microsoft Azure IoT Hub, ThingSpeak, and IBM Bluemix (IBM Cloud) allow microcontrollers such as ESP8266 and ESP32 to securely send/receive sensor data.  
 In this experiment, we simulate how ESP boards connect to these cloud platforms using MQTT/HTTP to build a complete cloud-integrated IoT system.
 
 ---
 
-## ## ESP8266 / ESP32 Microcontroller in Cloud Communication
+## ESP8266 / ESP32 Microcontroller in Cloud Communication
 
-### ### Overview
+### Overview
 ESP8266 and ESP32 are widely used Wi-Fi-enabled microcontrollers in IoT.
 
 - **ESP8266:** Low-cost Wi-Fi SoC with limited GPIO and low power use  
@@ -18,9 +18,9 @@ Both support internet-based communication:
 - HTTP REST APIs  
 - MQTT Protocol  
 - TLS/SSL secure communication  
-- IoT cloud SDKs  
+- IoT cloud SDKs
 
-### ### Role in Cloud Integration
+### Role in Cloud Integration
 - Connect to Wi-Fi  
 - Send sensor data to the cloud  
 - Receive cloud commands  
@@ -29,70 +29,70 @@ Both support internet-based communication:
 
 ---
 
-## ## IoT Cloud Platforms and Their Functions
+## IoT Cloud Platforms and Their Functions
 
-### ### AWS IoT Core (Amazon Web Services)
+### AWS IoT Core (Amazon Web Services)
 A highly scalable enterprise platform for IoT devices.
 
-#### #### Features
+#### Features
 - Secure **X.509 certificate** authentication  
 - **MQTT** support  
 - Device Shadow service  
 - Real-time analytics  
 - Integration with AWS DynamoDB, Lambda, S3  
 
-#### #### Use in this Experiment
+#### Use in this Experiment
 - ESP publishes sensor data to AWS MQTT broker  
 - AWS dashboard visualizes the uploaded data  
 
 ---
 
-### ### Microsoft Azure IoT Hub
+### Microsoft Azure IoT Hub
 Azure IoT Hub is a secure, bi-directional communication gateway.
 
-#### #### Features
+#### Features
 - Bi-directional messaging  
 - High-security **SAS Tokens**  
 - Supports MQTT, AMQP, HTTPS  
 - Integration with Power BI, Azure Functions  
 
-#### #### Use in Simulation
+#### Use in Simulation
 - ESP connects using **device connection string**  
 - Azure receives & displays sensor data  
 
 ---
 
-### ### ThingSpeak (MathWorks IoT Analytics)
+### ThingSpeak (MathWorks IoT Analytics)
 A popular platform for students and academic IoT projects.
 
-#### #### Features
+#### Features
 - Simple HTTP REST API  
 - Real-time graphs  
 - MATLAB analytics integration  
 - Easy channel creation  
 
-#### #### Use in this Experiment
+#### Use in this Experiment
 - ESP sends data via **HTTP GET/POST**  
 - Channel charts update in real time  
 
 ---
 
-### ### IBM Bluemix (IBM Cloud IoT Platform)
+### IBM Bluemix (IBM Cloud IoT Platform)
 IBM Cloud provides high-security IoT connectivity and analytics.
 
-#### #### Features
+#### Features
 - Device registry  
 - MQTT messaging  
 - Data pipelines  
 - AI analytics via IBM Watson  
 
-#### #### Use in Simulation
+#### Use in Simulation
 - ESP publishes topics to IBM MQTT broker  
 - Dashboard visualizes live sensor data  
 
 ---
 
-## ## Data Flow in Cloud-Integrated IoT System
+## Data Flow in Cloud-Integrated IoT System
 
 1. **Sensor Data Collection**  
    ESP reads values from sensors (DHT, LDR, Soil Moisture, MQ, Ultrasonic, etc.)
@@ -117,7 +117,7 @@ IBM Cloud provides high-security IoT connectivity and analytics.
 
 ---
 
-## ## MQTT & HTTP Usage in Cloud Integration
+## MQTT & HTTP Usage in Cloud Integration
 
 | Feature       | MQTT              | HTTP                  |
 | ------------- | ----------------- | --------------------- |
@@ -131,7 +131,7 @@ ESP selects the protocol based on the cloud platform requirements.
 
 ---
 
-## ## Benefits of Using Cloud Platforms in IoT
+## Benefits of Using Cloud Platforms in IoT
 - Remote monitoring from anywhere  
 - Secure encrypted communication  
 - Real-time dashboards  
@@ -142,7 +142,7 @@ ESP selects the protocol based on the cloud platform requirements.
 
 ---
 
-## ## Simulation Environment
+## Simulation Environment
 
 Tools such as **Wokwi**, **Proteus IoT Builder**, **Tinkercad IoT**, **Node-RED** offer simulation of:
 
@@ -152,7 +152,7 @@ Tools such as **Wokwi**, **Proteus IoT Builder**, **Tinkercad IoT**, **Node-RED*
 - Dashboard data visualization  
 - ESP firmware testing without hardware  
 
-### ### Benefits
+### Benefits
 - No physical hardware required  
 - No real internet needed  
 - Safe cloud connection testing  
