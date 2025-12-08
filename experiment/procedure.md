@@ -1,4 +1,4 @@
-## Procedure
+### Procedure for the experiment is as follows:
 
 1. Open the experiment in the virtual lab for establishing interrelation between cloud platforms and ESP8266/ESP32.  
    The ESP32 board and the DHT22 sensor are already connected in the workspace, and the ThingSpeak channel is preconfigured.
