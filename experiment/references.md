@@ -1,4 +1,4 @@
-## References
+### References
 
 1. ThingSpeak Documentation, "Getting Started with ThingSpeak", Available at: https://thingspeak.com/docs
 2. ESP32 Official Documentation, "Connecting to Cloud Platforms", Available at: https://docs.espressif.com
