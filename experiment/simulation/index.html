@@ -29,6 +29,23 @@
 </head>
 
 <body>
+        <!-- Instruction Box -->
+    <div class="instruction-box">
+        <h2 class="instruction-title">📋 Experiment Instructions</h2>
+        <div class="instruction-content">
+            <p><strong>Objective:</strong> Interface DHT11 sensor with ESP32 and send temperature & humidity data to ThingSpeak cloud platform using HTTP protocol.</p>
+            <ol>
+<li>Review the ESP32 code for WiFi credentials, ThingSpeak API key, and DHT11 sensor configuration.</li>
+<li>Understand the code flow including WiFi connection, sensor initialization, and HTTP GET request creation.</li>
+<li>Click <strong>"Start Simulation"</strong> to initiate WiFi connection and send sensor data to the ThingSpeak cloud.</li>
+<li>Observe temperature and humidity readings from the DHT11 sensor being transmitted at regular intervals.</li>
+<li>Scroll down to view the <strong>ThingSpeak Cloud Dashboard</strong> with live data, real-time graphs, and updated timestamps.</li>
+<li>Click <strong>"Stop Simulation"</strong> to terminate the connection and stop data transmission.</li>
+
+            </ol>
+            <p class="note">💡 <strong>Note:</strong> ThingSpeak allows data updates every 15 seconds. The ESP32 sends data to Channel 2454420 using HTTP GET with API Key authentication.</p>
+        </div>
+    </div>
 
   <div class="container">
     <div class="box" style="border: none;">
