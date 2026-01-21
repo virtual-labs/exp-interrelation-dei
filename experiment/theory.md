@@ -143,7 +143,7 @@ These dashboards enable:
 - Historical trend analysis  
 - Debugging and performance evaluation of IoT systems  
 
-<div><img src="./images/thingspeak_dashboard.png" width="45%"></div>  
+<div><img src="./images/dashboard.png" width="45%"></div>  
 
 #### Data Retrieval and Cloud APIs
 
