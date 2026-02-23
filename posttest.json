@@ -1,0 +1,115 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": "1. How does ThingSpeak compare to AWS IoT Core?",
+      "answers": {
+        "a": "ThingSpeak is easier for beginners; AWS IoT Core is more advanced and scalable",
+        "b": "Both offer identical features",
+        "c": "AWS is only for beginners",
+        "d": "ThingSpeak supports certificates like AWS"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "2. Why does AWS IoT Core require certificates?",
+      "answers": {
+        "a": "For device naming",
+        "b": "To provide secure authentication and encryption",
+        "c": "To increase data speed",
+        "d": "To reduce data usage"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "3. What role does an MQTT topic play in cloud communication?",
+      "answers": {
+        "a": "It increases Wi-Fi range",
+        "b": "It acts as a channel for organizing and routing messages",
+        "c": "It stores data permanently",
+        "d": "It encrypts the data"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "4. Why is device identity important in IBM Bluemix?",
+      "answers": {
+        "a": "To increase sensor accuracy",
+        "b": "To uniquely authenticate each device on the platform",
+        "c": "To reduce cloud cost",
+        "d": "To increase battery life"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "5. How does Azure IoT Hub ensure secure data transfer?",
+      "answers": {
+        "a": "By compressing the data",
+        "b": "By using protocols like HTTPS and MQTT with security tokens",
+        "c": "By limiting device connections",
+        "d": "By using Wi-Fi encryption only"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "6. Why are dashboards important in IoT platforms?",
+      "answers": {
+        "a": "They reduce cloud storage",
+        "b": "They visualize sensor data for analysis and monitoring",
+        "c": "They increase Wi-Fi speed",
+        "d": "They automatically repair devices"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "7. Which of the following is a real-life application example?",
+      "answers": {
+        "a": "ThingSpeak – real-time temperature graphing",
+        "b": "AWS IoT – social media posting",
+        "c": "Azure – offline data backup only",
+        "d": "IBM Bluemix – gaming applications"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "8. How do visualization tools help developers?",
+      "answers": {
+        "a": "By reducing the number of sensors needed",
+        "b": "By showing real-time data trends for debugging and improvements",
+        "c": "By improving battery life",
+        "d": "By replacing cloud servers"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "9. What happens if Wi-Fi disconnects during cloud transmission?",
+      "answers": {
+        "a": "Data transmits faster",
+        "b": "Data is delayed or lost until reconnection",
+        "c": "Sensor automatically shuts down",
+        "d": "Cloud generates data itself"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "10. How do cloud systems support IoT scalability?",
+      "answers": {
+        "a": "By limiting the number of devices",
+        "b": "By allowing thousands of devices to connect and process data efficiently",
+        "c": "By using only local storage",
+        "d": "By disabling security features"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    }
+  ]
+}

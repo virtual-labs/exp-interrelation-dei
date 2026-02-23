@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Virtual IoT Lab DEI</title>
+    <link
+      rel="icon"
+      href="https://www.vlab.co.in/images/logo.jpg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" type="text/css" href="src/css/style.css" />
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="./src/css/sidepanel.css" />
+    
+    <!-- CodeMirror CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/theme/default.min.css">
+    
+    <!-- CodeMirror JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.2/mode/clike/clike.min.js"></script>
+  </head>
+
+  <body>
+    
+
+    <div class="container" >
+      <img id="ifimg" src="./src/images/dht_off.gif" alt="interfacing" />
+      <textarea id="arduinoCode"></textarea>
+      <div class="code-head startStop">
+        <h2 id="pushbuttonPower" onclick="changePower();">Start Simulation</h2>
+      </div>
+    </div>
+    <script>
+      // Initialize CodeMirror editor in read-only mode with an increased height
+      var editor = CodeMirror.fromTextArea(document.getElementById("arduinoCode"), {
+            mode: "text/x-c++src", // For C++/Arduino syntax highlighting
+            lineNumbers: true, // Show line numbers
+            matchBrackets: true, // Highlight matching brackets
+            theme: "default", // You can change the theme
+            readOnly: "nocursor", // Make the editor read-only
+            tabSize: 4,
+            indentUnit: 4,
+        });
+
+      // for insert code
+      function insertled() {
+        var code = `
+/* ------------------------------------------------------------------
+   Cloud Interrelation of Thingspeak with DHT22 & I2C LCD
+   Platform: ESP32 or ESP8266 
+
+   - Reads DHT22 temperature & humidity
+   - Displays values on 16x2 I2C LCD
+   - Sends values to ThingSpeak using HTTP GET
+   ------------------------------------------------------------------ */
+#include <WiFi.h>
+#include <WiFi.h>
+#include <HTTPClient.h>
+#include "DHT.h"
+
+// WiFi credentials
+const char* ssid = "iotvlab";
+const char* password = "iotvlab123";
+
+// ThingSpeak API settings
+String apiKey = "VLEIWMHH82MLCBD";
+const char* server = "api.thingspeak.com";
+
+// DHT Sensor configuration
+#define DHTPIN 4         // DHT sensor data pin
+#define DHTTYPE DHT11    // Use DHT11 (can switch to DHT22 if needed)
+DHT dht(DHTPIN, DHTTYPE);
+
+void setup() {
+  Serial.begin(115200);
+  WiFi.begin(ssid, password);
+  dht.begin();
+
+  Serial.print("Connecting to WiFi");
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(500);
+    Serial.print(".");      // Print dots while connecting
+  }
+
+  Serial.println();
+  Serial.println("WiFi connected");
+}
+
+void loop() {
+  if (WiFi.status() == WL_CONNECTED) {
+    HTTPClient http;
+
+    // Read temperature & humidity from DHT sensor
+    float temperature = dht.readTemperature();
+    float humidity = dht.readHumidity();
+
+    // Check if reading failed
+    if (isnan(temperature) || isnan(humidity)) {
+      Serial.println("Failed to read from DHT sensor!");
+      return;
+    }
+
+    // URL format for ThingSpeak update
+    String url = "http://api.thingspeak.com/update?api_key=" + apiKey +
+                 "&field1=" + String(temperature) +
+                 "&field2=" + String(humidity);
+
+    http.begin(url);                  // Start HTTP request
+    int httpCode = http.GET();        // Send the GET request
+
+    if (httpCode > 0) {
+      String payload = http.getString();
+      Serial.println("Data sent to ThingSpeak: " + payload);
+    } 
+    else {
+      Serial.println("Error in sending data to ThingSpeak");
+    }
+
+    http.end();                       // Close connection
+  } 
+  else {
+    Serial.println("WiFi not connected");
+  }
+
+  // ThingSpeak allows updates every 15 seconds
+  delay(15000);
+}
+`;
+        editor.setValue(code);
+      }
+      insertled();
+    </script>
+
+    <script type="text/javascript" src="src/js/main.js"></script>
+  </body>
+</html>
